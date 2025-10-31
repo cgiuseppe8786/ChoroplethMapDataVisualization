@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>US Education Choropleth Map</title>
+
+    <!-- D3.js v7 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- topojson per counties -->
+    <script src="https://unpkg.com/topojson-client@3"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Toggle tema (come nella heatmap) -->
+    <span id="theme-toggle" class="theme-icon" role="button" tabindex="0" aria-label="Cambia tema"
+        title="Cambia tema">🌙</span>
+
+    <div id="container">
+        <h1 id="title">United States Educational Attainment</h1>
+        <p id="description">
+            Percentage of adults age 25 and older with a bachelor's degree or higher (2010–2014)
+        </p>
+
+        <!-- area mappa -->
+        <svg id="chart" width="960" height="610"></svg>
+
+        <!-- tooltip richiesto -->
+        <div id="tooltip"></div>
+
+        <!-- legenda richiesta -->
+        <svg id="legend" aria-label="Legenda choropleth"></svg>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
